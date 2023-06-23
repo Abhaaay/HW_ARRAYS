@@ -10,7 +10,20 @@ public class StatsService {
 
         return sumSales;
     }
-}
+
+    public long getMiddleSales(long[] sales) {
+        long sumSales = 0;
+
+        for (int i = 0; i < sales.length; i++) {
+            sumSales += sales[i];
+        }
+            long middleSales = sumSales/sales.length;
+
+
+        return middleSales;
+    }
+
+    }
 
 
 
