@@ -46,8 +46,20 @@ public class StatsService {
 
         return minMonth + 1;
     }
-}
 
+    public int getAmountMonthMinMidSal(long[] sales) {
+        int counter = 0;
+        long middleSales = getMiddleSales(sales);
+
+        for (int i = 0; i < sales.length; i++) {
+            if (sales[i] < middleSales) {
+                counter++;
+            }
+        }
+
+        return counter;
+    }
+}
 
 
 
