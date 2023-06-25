@@ -58,8 +58,23 @@ public class StatsService {
         }
 
         return counter;
+
+    }
+
+    public int getAmountMonthMaxMidSal(long[] sales) {
+        int counter = 0;
+        long middleSales = getMiddleSales(sales);
+
+        for (int i = 0; i < sales.length; i++) {
+            if (sales[i] > middleSales) {
+                counter++;
+            }
+        }
+
+        return counter;
     }
 }
+
 
 
 
